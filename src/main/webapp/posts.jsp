@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ page import="ru.job4j.dream.store.Store" %>
-<%@ page import="ru.job4j.dream.model.Post " %>
+<%@ page import="ru.job4j.dream.model.Post" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -21,28 +21,30 @@
     <title>Работа мечты</title>
 </head>
 <body>
-<div class="container">
+<div class="container pt-3">
+
     <div class="row">
-        <table class="table">
-            <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Объявления</th>
-                <th scope="col">Description</th>
-                <th scope="col">Created</th>
-            </tr>
-            </thead>
-            <tbody>
-            <% for (Post post : Store.instOf().findAll()) { %>
-            <tr>
-                <td><%= post.getId() %></td>
-                <td><%= post.getName() %></td>
-                <td><%= post.getDescription() %></td>
-                <td><%= post.getCreated() %></td>
-            </tr>
-            <% } %>
-            </tbody>
-        </table>
+        <div class="card" style="width: 100%">
+            <div class="card-header">
+                Вакансии
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Названия</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <% for (Post post : Store.instOf().findAll()) { %>
+                    <tr>
+                        <td><%= post.getName() %></td>
+                    </tr>
+                    <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </div>
 </body>

@@ -1,6 +1,6 @@
-package ru.jobj4.dream.store;
+package ru.job4j.dream.store;
 
-import ru.jobj4.dream.model.Post;
+import ru.job4j.dream.model.Post;
 
 import java.util.Collection;
 import java.util.Date;
