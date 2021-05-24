@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ page import="ru.job4j.dream.store.Store" %>
 <%@ page import="ru.job4j.dream.model.Candidate" %>
+<%@ page import="java.util.Collection" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -39,7 +40,7 @@
 
                     </thead>
                     <tbody>
-                    <% for (Candidate candidate : Store.instOf().findAllCandidates()) { %>
+                    <% for (Candidate candidate : (Collection<Candidate>) request.getAttribute("candidates")) { %>
 
                     <tr>
                         <td>

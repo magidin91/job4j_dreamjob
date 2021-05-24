@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ page import="ru.job4j.dream.store.Store" %>
 <%@ page import="ru.job4j.dream.model.Post" %>
+<%@ page import="java.util.Collection" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -38,7 +39,8 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <% for (Post post : Store.instOf().findAllPosts()) { %>
+                    <!-- получили атрибут из запроса -->
+                    <% for (Post post : (Collection<Post>) request.getAttribute("posts")) { %>
 
                     <tr>
                     <td>
