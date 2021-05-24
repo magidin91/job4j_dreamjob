@@ -47,7 +47,7 @@
             </div>
                 <div class="card-body">
                     <!-- передаем id -->
-                    <form action="<%=request.getContextPath()%>/candidate/save?id=<%=candidate.getId()%>" method="post">
+                    <form action="<%=request.getContextPath()%>/candidates.do?id=<%=candidate.getId()%>" method="post">
                         <div class="form-group">
                             <label>Имя</label>
                             <%-- value="<%=post.getName()%> - отображаем имя в форме --%>
